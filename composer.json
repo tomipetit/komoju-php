@@ -9,6 +9,7 @@
             "email": "tomipetit@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "vcs",
