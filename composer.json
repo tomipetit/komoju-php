@@ -1,0 +1,27 @@
+{
+    "name": "tomipetit/komoju-php",
+    "description": "komoju PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Takeshi Tomida",
+            "email": "tomipetit@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/tomipetit/komoju-php.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tomipetit\\": "src"
+        }
+    },
+    "include-path": ["src/"]
+}
