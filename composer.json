@@ -3,13 +3,13 @@
     "description": "komoju PHP",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Takeshi Tomida",
             "email": "tomipetit@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "vcs",
