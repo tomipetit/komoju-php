@@ -27,7 +27,7 @@ abstract class BaseClass
 
         return json_decode($buf);
     }
-    protected function get(string $url, array $data)
+    protected function get(string $url, array $data = [])
     {
         $url = $data ? $url . "?" . http_build_query($data) : $url;
         $ch = curl_init();

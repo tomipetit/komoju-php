@@ -12,7 +12,7 @@ class Subscription extends BaseClass
     {
         return $this->get($this->apiPath, $params);
     }
-    public function get($id)
+    public function show($id)
     {
         return $this->get($this->apiPath . "/{$id}");
     }
