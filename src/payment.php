@@ -17,13 +17,13 @@ class Payment extends BaseClass
         return $this->get($this->apiPath . "/{$id}");
     }
 
-    public function create($type, $params)
+    public function create(string $type, array $params)
     {
-        $params->type = $type;
-        if (!property_exists($params, "currency")) {
-            $params->currency = "JPY";
+        $params["type"] = $type;
+        if (!array_key_exists("currency", $params)) {
+            $params["currency"] = "JPY";
         }
-        if (!(property_exists($params, "payment_details") || property_exists($params, "customer"))) {
+        if (!(array_key_exists("payment_details", $params) || array_key_exists("customer", $params))) {
             return $this->error([
                 "message" => "A required parameter payment_details or customer is missing",
                 "code" => "missing_parameter",

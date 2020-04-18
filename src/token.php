@@ -10,12 +10,10 @@ class Token extends BaseClass
 
     public function create($detail, $currency = "JPY")
     {
-        $params = (object) [
+        $params = [
             "payment_details" => $detail,
+            "currency" => $currency,
         ];
-        if ($currency) {
-            $params->currency = $currency;
-        }
         return $this->post($this->apiPath, $params);
     }
 }
