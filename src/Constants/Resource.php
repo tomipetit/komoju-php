@@ -9,5 +9,5 @@ class Resource
     const TOKENS = "/api/v1/tokens";
     const CUSTOMERS = "/api/v1/customers";
     const EVENTS = "/api/v1/events";
-    const SUBSCRIPTIONS = "/api/vi/subscriptions"
+    const SUBSCRIPTIONS = "/api/vi/subscriptions";
 }
