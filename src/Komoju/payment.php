@@ -1,8 +1,8 @@
 <?php
 
-namespace Tomipetit;
+namespace Tomipetit\Komoju;
 
-use tomipetit\Constants\Resource;
+use Tomipetit\Komoju\Constants\Resource;
 
 class Payment extends BaseClass
 {

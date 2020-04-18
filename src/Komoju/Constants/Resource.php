@@ -1,6 +1,6 @@
 <?php
 
-namespace Tomipetit\Constants;
+namespace Tomipetit\Komoju\Constants;
 
 class Resource
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tomipetit;
+namespace Tomipetit\Komoju;
 
 abstract class BaseClass
 {

@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tomipetit\\": "src"
+            "Tomipetit\\Komoju\\": "src/"
         }
     },
     "include-path": ["src/"]
