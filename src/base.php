@@ -11,7 +11,7 @@ abstract class BaseClass
         $this->secretKey = $secretKey;
     }
 
-    protected function post(string $url, array $data = [])
+    protected function post($url, array $data = [])
     {
         $ch = curl_init();
         if ($data) {
@@ -27,7 +27,7 @@ abstract class BaseClass
 
         return json_decode($buf);
     }
-    protected function get(string $url, array $data = [])
+    protected function get($url, array $data = [])
     {
         $url = $data ? $url . "?" . http_build_query($data) : $url;
         $ch = curl_init();
@@ -41,7 +41,7 @@ abstract class BaseClass
 
         return json_decode($buf);
     }
-    protected function patch(string $url, array $data)
+    protected function patch($url, array $data)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
@@ -55,7 +55,7 @@ abstract class BaseClass
 
         return json_decode($buf);
     }
-    protected function delete(string $url)
+    protected function delete($url)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');

@@ -19,7 +19,7 @@ class Komoju
 
     private function _dispatch($className)
     {
-        $ref = new \ReflectionClass(ucfirst($className));
+        $ref = new \ReflectionClass("Tomipetit\\Komoju\\" . ucfirst($className));
         return $ref->newInstance([$this->secretKey]);
     }
 }
