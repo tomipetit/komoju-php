@@ -17,8 +17,9 @@ class Customer extends BaseClass
         return $this->get($this->apiPath . "/{$id}");
     }
 
-    public function create($params)
+    public function create($key, array $params = [])
     {
+        $params["payment_details"] = $key;
         return $this->post($this->apiPath, $params);
     }
 

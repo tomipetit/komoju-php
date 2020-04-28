@@ -23,9 +23,13 @@ abstract class BaseClass
         curl_setopt($ch, CURLOPT_USERPWD, $this->secretKey);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         $buf = curl_exec($ch);
-        curl_close($ch);
+        $statusCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 
-        return json_decode($buf);
+        curl_close($ch);
+        $resp = json_decode($buf);
+        $resp->status_code = $statusCode;
+
+        return json_decode($resp);
     }
     protected function get($url, array $data = [])
     {
@@ -37,9 +41,14 @@ abstract class BaseClass
         curl_setopt($ch, CURLOPT_USERPWD, $this->secretKey);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         $buf = curl_exec($ch);
+        $statusCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+
         curl_close($ch);
 
-        return json_decode($buf);
+        $resp = json_decode($buf);
+        $resp->status_code = $statusCode;
+
+        return json_decode($resp);
     }
     protected function patch($url, array $data)
     {
@@ -51,9 +60,14 @@ abstract class BaseClass
         curl_setopt($ch, CURLOPT_USERPWD, $this->secretKey);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         $buf = curl_exec($ch);
+        $statusCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+
         curl_close($ch);
 
-        return json_decode($buf);
+        $resp = json_decode($buf);
+        $resp->status_code = $statusCode;
+
+        return json_decode($resp);
     }
     protected function delete($url)
     {
@@ -64,9 +78,14 @@ abstract class BaseClass
         curl_setopt($ch, CURLOPT_USERPWD, $this->secretKey);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         $buf = curl_exec($ch);
+        $statusCode = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+
         curl_close($ch);
 
-        return json_decode($buf);
+        $resp = json_decode($buf);
+        $resp->status_code = $statusCode;
+
+        return json_decode($resp);
     }
 
     protected function error(array $value)
