@@ -29,7 +29,7 @@ abstract class BaseClass
         $resp = json_decode($buf);
         $resp->status_code = $statusCode;
 
-        return json_decode($resp);
+        return $resp;
     }
     protected function get($url, array $data = [])
     {
@@ -48,7 +48,7 @@ abstract class BaseClass
         $resp = json_decode($buf);
         $resp->status_code = $statusCode;
 
-        return json_decode($resp);
+        return $resp;
     }
     protected function patch($url, array $data)
     {
@@ -67,7 +67,7 @@ abstract class BaseClass
         $resp = json_decode($buf);
         $resp->status_code = $statusCode;
 
-        return json_decode($resp);
+        return $resp;
     }
     protected function delete($url)
     {
@@ -85,7 +85,7 @@ abstract class BaseClass
         $resp = json_decode($buf);
         $resp->status_code = $statusCode;
 
-        return json_decode($resp);
+        return $resp;
     }
 
     protected function error(array $value)
